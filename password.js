@@ -7,18 +7,25 @@ const reader = readline.createInterface({
 
 
 
-reader.question("what is your password?", function(input){ 
-  let token = input.split(' ');
-  console.log(`The password you entered is ${input}`)
+reader.question("What is your password?", function(input){ 
   
-  if( token.length < 9 && token.length> 20){
+  if( input.length >= 9){
     console.log("That was correct!")
-  } else if (token.length < 9) {
-    console.log("Unfortunately, the password is too short.")
-  } else if (password.length > 20){
-    console.log("Unfortunately, the password is too long!")
+  } else {
+       console.log("Unfortunately, the password was not correct.");
   }
-  
   
   reader.close()
   });
+
+  /// answer 
+
+//   console.log('Welcome to the password validator')
+//   reader.question("What is your password?", function(input){
+//       if(input.length >= 10){
+//           console.log("You got it right!")
+//       } else {
+//           console.log("that was a failure.")
+//       }
+//   }
+//   )
